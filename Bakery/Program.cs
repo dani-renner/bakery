@@ -14,7 +14,10 @@ namespace Menu
       Console.ForegroundColor = ConsoleColor.Yellow;
       Console.WriteLine("How many loaves of bread would you like?");
       Bread userBread = new Bread(int.Parse(Console.ReadLine()));
-      Console.WriteLine(userBread.BreadCount);
+      Console.WriteLine("Okay! And how many pastries would you like?");
+      Pastry userPastry = new Pastry(int.Parse(Console.ReadLine()));
+      int userCost = userBread.BreadCost()+userPastry.PastryCost();
+      Console.WriteLine("Fabulous! Your total is ${0}.",userCost);
     }
   }
 }
