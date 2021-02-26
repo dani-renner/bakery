@@ -13,8 +13,8 @@ namespace Menu
       Console.WriteLine("Pastries are $2 each or 3 for $5.");
       Console.ForegroundColor = ConsoleColor.Yellow;
       Console.WriteLine("How many loaves of bread would you like?");
-      int breadOrder = int.Parse(Console.ReadLine());
-      Console.WriteLine(breadOrder);
+      Bread userBread = new Bread(int.Parse(Console.ReadLine()));
+      Console.WriteLine(userBread.BreadCount);
     }
   }
 }
