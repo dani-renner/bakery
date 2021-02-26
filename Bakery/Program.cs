@@ -14,8 +14,8 @@ namespace Menu
       Console.WriteLine("Pastries are $2 each or 3 for $5.");
       Console.ForegroundColor = ConsoleColor.Blue;
       Console.WriteLine("How many loaves of bread would you like?");
-      bool parsedCorrectly = int.TryParse(Console.ReadLine(), out int breadEntry);
-      if (!parsedCorrectly)
+      bool breadParsedCorrectly = int.TryParse(Console.ReadLine(), out int breadEntry);
+      if (!breadParsedCorrectly)
       {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Please enter only an integer.");
@@ -24,7 +24,15 @@ namespace Menu
       }
       Bread userBread = new Bread(breadEntry);
       Console.WriteLine("Okay! And how many pastries would you like?");
-      Pastry userPastry = new Pastry(int.Parse(Console.ReadLine()));
+      bool pastryParsedCorrectly = int.TryParse(Console.ReadLine(), out int pastryEntry);
+      if (!pastryParsedCorrectly)
+      {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Please enter only an integer.");
+        Main();
+        return;
+      }
+      Pastry userPastry = new Pastry(pastryEntry);
       int userCost = userBread.BreadCost()+userPastry.PastryCost();
       Console.WriteLine("Fabulous! Your total is ${0}.",userCost);
     }
