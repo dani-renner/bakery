@@ -13,7 +13,17 @@ namespace Menu
       Console.WriteLine("Pastries are $2 each or 3 for $5.");
       Console.ForegroundColor = ConsoleColor.Yellow;
       Console.WriteLine("How many loaves of bread would you like?");
-      Bread userBread = new Bread(int.Parse(Console.ReadLine()));
+      string breadAnswer = Console.ReadLine();
+      int breadInt = int.Parse(breadAnswer);
+      if(typeof(int)==breadInt.GetType())
+      {
+        Bread userBread = new Bread(breadInt);
+      }
+      else 
+      {
+        Console.WriteLine("Please only enter integers.");
+        Main();
+      }
       Console.WriteLine("Okay! And how many pastries would you like?");
       Pastry userPastry = new Pastry(int.Parse(Console.ReadLine()));
       int userCost = userBread.BreadCost()+userPastry.PastryCost();
