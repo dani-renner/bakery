@@ -7,17 +7,17 @@ namespace Menu.Models
     {
       BreadCount = breadcount;
     }
-    public int BreadTotal(int breadcount)
+    public int BreadCost()
     {
-      int breadtotal = 0;
-      for(int i=1;i<=breadcount;i++)
+      int breadcost = 0;
+      for(int i=1;i<=BreadCount;i++)
       {
         if(!(i%3==0))
         {
-          breadtotal += 5;
+          breadcost += 5;
         }
       }
-      return breadtotal;
+      return breadcost;
     }
   }
   public class Pastry
@@ -26,6 +26,22 @@ namespace Menu.Models
     public Pastry(int pastrycount)
     {
       PastryCount = pastrycount;
+    }
+    public int PastryCost()
+    {
+      int pastrycost = 0;
+      for(int i=1;i<=PastryCount;i++)
+      {
+        if(!(i%3==0))
+        {
+          pastrycost += 2;
+        }
+        else
+        {
+          pastrycost += 1;
+        }
+      }
+      return pastrycost;
     }
   }
 }
