@@ -7,6 +7,18 @@ namespace Menu.Models
     {
       BreadCount = breadcount;
     }
+    public int BreadTotal(int breadcount)
+    {
+      int breadtotal = 0;
+      for(int i=1;i<=breadcount;i++)
+      {
+        if(!(i%3==0))
+        {
+          breadtotal += 5;
+        }
+      }
+      return breadtotal;
+    }
   }
   public class Pastry
   {

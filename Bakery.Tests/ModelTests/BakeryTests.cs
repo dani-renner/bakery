@@ -19,5 +19,11 @@ namespace Menu.TestTools
       Pastry newPastry = new Pastry(3);
       Assert.AreEqual(typeof(Pastry),newPastry.GetType());
     }
+    [TestMethod]
+    public void BreadTotalCalculator_TotalsCost_Bread()
+    {
+      Bread newBread = new Bread(4);
+      Assert.AreEqual(80, newBread.BreadTotal(4));
+    }
   }
 }
