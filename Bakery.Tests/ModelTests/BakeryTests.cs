@@ -28,8 +28,8 @@ namespace Menu.TestTools
     [TestMethod]
     public void PastryCostCalculator_TotalsCost_Pastry()
     {
-      Pastry newBread = new Pastry(3);
-      Assert.AreEqual(15, newBread.PastryCost());
+      Pastry newBread = new Pastry(6);
+      Assert.AreEqual(10, newBread.PastryCost());
     }
   }
 }
