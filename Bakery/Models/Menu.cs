@@ -3,9 +3,11 @@ namespace Menu.Models
   public class Bread
   {
     public int BreadCount{get; set;}
-    public Bread(int breadcount)
+    public int WheatCount{get; set;}
+    public Bread(int breadcount, int wheatcount)
     {
       BreadCount = breadcount;
+      WheatCount = wheatcount;
     }
     public int BreadCost()
     {
@@ -16,6 +18,10 @@ namespace Menu.Models
         {
           breadcost += 5;
         }
+      }
+      for(int i=1;i<=WheatCount;i++)
+      {
+        breadcost += 5;
       }
       return breadcost;
     }

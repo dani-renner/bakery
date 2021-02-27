@@ -10,7 +10,7 @@ namespace Menu.TestTools
     [TestMethod]
     public void BreadConstructor_CreatesInstanceofBread_Bread()
     {
-      Bread newBread = new Bread(2);
+      Bread newBread = new Bread(2, 2);
       Assert.AreEqual(typeof(Bread),newBread.GetType());
     }
     [TestMethod]
@@ -22,7 +22,7 @@ namespace Menu.TestTools
     [TestMethod]
     public void BreadCostCalculator_TotalsCost_Bread()
     {
-      Bread newBread = new Bread(4);
+      Bread newBread = new Bread(4, 4);
       Assert.AreEqual(15, newBread.BreadCost());
     }
     [TestMethod]

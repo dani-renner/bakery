@@ -10,10 +10,11 @@ namespace Menu
     {
       Console.ForegroundColor = ConsoleColor.Cyan;
       Console.WriteLine("Welcome to Pierre's Bakery!");
-      Console.WriteLine("Bread is $5/loaf and if you buy 2, you get 1 for free!");
+      Console.WriteLine("White Bread is $5/loaf and if you buy 2, you get 1 for free!");
+      Console.WriteLine("Wheat Bread is $5/loaf, and");
       Console.WriteLine("Pastries are $2 each or 3 for $5.");
       Console.ForegroundColor = ConsoleColor.Blue;
-      Console.WriteLine("How many loaves of bread would you like?");
+      Console.WriteLine("How many loaves of white bread would you like?");
       bool breadParsedCorrectly = int.TryParse(Console.ReadLine(), out int breadEntry);
       if (!breadParsedCorrectly)
       {
@@ -22,7 +23,16 @@ namespace Menu
         Main();
         return;
       }
-      Bread userBread = new Bread(breadEntry);
+      Console.WriteLine("How many loaves of wheat bread would you like?");
+      bool wheatBreadParsedCorrectly = int.TryParse(Console.ReadLine(), out int wheatBreadEntry);
+      if (!wheatBreadParsedCorrectly)
+      {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Please enter only an integer.");
+        Main();
+        return;
+      }
+      Bread userBread = new Bread(breadEntry,wheatBreadEntry);
       Console.WriteLine("Okay! And how many pastries would you like?");
       bool pastryParsedCorrectly = int.TryParse(Console.ReadLine(), out int pastryEntry);
       if (!pastryParsedCorrectly)
