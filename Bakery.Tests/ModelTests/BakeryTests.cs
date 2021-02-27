@@ -23,7 +23,7 @@ namespace Menu.TestTools
     public void BreadCostCalculator_TotalsCost_Bread()
     {
       Bread newBread = new Bread(4, 4);
-      Assert.AreEqual(15, newBread.BreadCost());
+      Assert.AreEqual(35, newBread.BreadCost());
     }
     [TestMethod]
     public void PastryCostCalculator_TotalsCost_Pastry()
