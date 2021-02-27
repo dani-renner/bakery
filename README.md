@@ -21,9 +21,6 @@ _This is a console application written in C#! It presents the user with options 
 * Enter "dotnet run" (without the quotes) in the terminal to start
 * Use Ctrl + C to escape or quit the program if necessary
 
-## Known Bugs
-
-
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
