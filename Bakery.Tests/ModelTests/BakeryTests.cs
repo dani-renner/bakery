@@ -20,11 +20,17 @@ namespace Menu.TestTools
       Assert.AreEqual(typeof(Pastry),newPastry.GetType());
     }
     [TestMethod]
-    public void BreadCostCalculator_TotalsCost_Bread()
+    public void BreadDiscountCost_TotalsCost_Bread()
     {
       Bread newBread = new Bread(4, 4);
       Assert.AreEqual(35, newBread.BreadCost());
     }
+    [TestMethod]
+    public void BreadCost_TotalsCost_Bread()
+    {
+      Bread newBread = new Bread(1, 2);
+      Assert.AreEqual(15, newBread.BreadCost());
+    }  
     [TestMethod]
     public void PastryCostCalculator_TotalsCost_Pastry()
     {
