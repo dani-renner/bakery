@@ -9,6 +9,7 @@
 
 * C#
 * MSTest
+* ASP.NET
 
 ## Description
 _This is a console application written in C#! It presents the user with options of baked items they can purchase and calculates their price!_
@@ -17,9 +18,14 @@ _This is a console application written in C#! It presents the user with options 
 ## Setup/Installation Requirements
 
 * You can clone the repository to your desktop
-* Navigate to the root directory
+* Navigate to the Bakery directory
 * Enter "dotnet run" (without the quotes) in the terminal to start
 * Use Ctrl + C to escape or quit the program if necessary
+
+### Running Tests
+
+* Navigate to the Bakery.Tests directory
+* Enter "dotnet test" (without the quotes) in the terminal
 
 ## License
 
